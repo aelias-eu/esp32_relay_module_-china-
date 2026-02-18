@@ -44,3 +44,4 @@ I managed to get this schematics file [ESP32_Relay_X8_Modbus_303E32DC812.pdf](fi
 
 ## Tools
  - [ModbusTools](https://github.com/serhmarch/ModbusTools) by Serhii Marchuk - Multi-platform MODBUS client/server
+ * [modbus-esp8266](https://github.com/emelianov/modbus-esp8266) library for the Arduino IDE
