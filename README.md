@@ -8,7 +8,7 @@ I ordered mine from [Aliexpress](https://www.aliexpress.com/item/100501051810887
 This repository is focused to the 8-channel version of that product. I don't own the 4-channel version so I cannot verify validity of here published informations for that version.
 
 ## Project goals
- - [x] Basic I/O control via Modbus in the
+ - [x] Basic I/O control via Modbus RTU
  - [x] Add Modbus configuration parameters (modbus address, baudrate,...)
  - [ ] Allow the Input-Output tie to be optional
  - [ ] Use the pins on JP1 for 1Wire sensors
