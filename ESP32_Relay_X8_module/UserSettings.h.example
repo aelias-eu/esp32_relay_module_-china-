@@ -1,0 +1,22 @@
+/*
+  User configurable module firmware parameters
+*/
+
+#define USER_RS485_SETTINGS   
+#define RS485_BAUDRATE 0x0A  // Default Baudrate
+                             // BAUDRATE Options: 0x00 = 1200, 0x01 = 1800, 0x02 = 2400, 0x03 = 4800, 0x04 = 9600, 0x05 = 19200, 0x06 = 28800, 0x07 = 38400, 0x08 = 57600, 0x09 = 76800, 0x0A = 115200, 0x0B = 230400, 0x0C = 460800, 0x0D = 576000, 0x0E = 921600
+#define RS485_DATABITS 8     // Default DataBits
+#define RS485_PARITY   0x00  // Default parity 0x00 ==None; 0x01 == Odd; 0x02 == Even
+#define RS485_STOPBITS 1     // Default StopBits
+#define RS485_ADDRESS  1     // Default Modbus module address
+
+// Wifi & OTA user settings
+// ToDo: Add WiFI & OTA Settings & Functionality
+
+/*
+  Modbus actions
+  - Actions from 0x01 - 0x5F should be left reserved for future usage in main firmware  
+  - Custom actions should use addresses 0x60 - 0xFF
+*/
+
+
