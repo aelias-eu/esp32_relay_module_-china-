@@ -14,6 +14,9 @@ This repository is focused to the 8-channel version of that product. I don't own
  - [ ] Use the pins on JP1 for 1Wire sensors
  - [ ] WiFi - on demand AP/Client enable for Firmware OTA upgrades\
        Should be enabled/disabled via Modbus or physical inputs.
+
+## In this repository:
+ * [Base firmware](/ESP32_Relay_X8_module) with MODBUS RTU, changeable address and RS485 communication parameter settings (baudrate up to 921600) and config reset functionality
       
 ## Status on arival:
 The module works as Modbus Slave with slave ID=1. According to all sources I managed to gather, this looks to be hardcoded. The bus connection parameters are also hardcoded.
