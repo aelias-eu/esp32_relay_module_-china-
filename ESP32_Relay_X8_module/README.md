@@ -1,9 +1,9 @@
-# Base firmware verion for the ESP32 Relay X8 Modbus RS485 module
-This module should allow everything, that worked in the original firmware and on top of that::
- - allows you to change RS485 communication parameters
- - allows you to change Modbus module address
- - can show debug messages
- - reset communication parameters by pressing BOOT button for more than 10 seconds in standard RUN mode
+# Base firmware version for the ESP32 Relay X8 Modbus RS485 module
+This module allows everything, that worked in the original firmware and on top of that::
+ - you can change RS485 communication parameters (via MODBUS registers)
+ - you can change Modbus module address (via MODBUS register)
+ - can enablke/disable debug messages on the serial interface
+ - you can reset communication parameters to defaults by pressing BOOT button for more than 10 seconds in standard RUN mode
 
 ## First steps:
  * You need the [modbus-esp8266](https://github.com/emelianov/modbus-esp8266) for the Arduino IDE
@@ -71,9 +71,10 @@ Write operations are reserved for triggering various actions, based on the writt
 | 0x0D | 576000 |
 | 0x0E | 921600 |
 
+After you change the communication parameters via holding registers 0x0001-0x0005, you need to store and apply the new settings by writing  0x0F to the holding register 0x0000. This will store settings to the NVM and restart the module with new settings.
 
 ## Debug messages
-The code uses ESP based log messages from **esp_log.h** so instead of serial.print use ESP_LOGI() for info messages, ESP_LOGD() for debug messages, etc...\
+The code uses ESP based log messages from **esp_log.h** so instead of Serial.print() use ESP_LOGI() for info messages, ESP_LOGD() for debug messages, etc...\
 Just toggle the compiler settings to change message level show to the serial console. \ 
 In Arduino IDE Menu: **Tools** -> **Core Debug Level** -> From **None** up to **Verbose**. \
-It's recommended to change it to **None** for production usage firmware compilation.
+It's recommended to change it to **None** for production firmware compilation.
